@@ -17,7 +17,6 @@
 
             tbody.innerHTML = '';
 
-            debugger
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.onclick = function () {
