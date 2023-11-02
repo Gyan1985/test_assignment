@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<script src="{% static 'js/detail.js' %}"></script>
+
+<header>
+    <h1>Product Details</h1>
+</header>
+<main>
+    <div class="product-detail">
+        <div class="product-image">
+            <img class="image" src="https://d3nn873nee648n.cloudfront.net/900x600/20487/300-PT1049064.jpg" alt="Product Image">
+        </div>
+        <div>
+        <div class="product-info">
+            <h2>Name : {{object.name}}</h2>
+            <p class="price">Stock: {{object.stock}}</p>
+            <p class="category">Category: Category Name</p>
+            <div class="discription">
+                <strong >Description:</strong>
+                <p class="description">
+                    {{object.description}}
+                </p>
+            </div>
+            <div class="discription">
+                <strong >Note:</strong>
+                <p class="description">
+                    {{object.note}}
+                </p>
+            </div>
+            <div class="discription">
+                <strong >Availability:</strong>
+                <p class="description">
+                    {{object.availability}}
+                </p>
+            </div>
+            <div class="discription">
+                <strong >Supplier:</strong>
+                <p class="description">
+                    {{object.supplier.name}}
+                </p>
+            </div>
+        </div>
+           <div class="button"><button class="add-to-cart" id="back">Back</button></div> 
+        </div>
+    </div>
+</main>
+{% endblock %}

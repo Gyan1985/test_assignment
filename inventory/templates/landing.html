@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<script src="{% static 'js/datatable.js' %}"></script>
+<div class="search-container">
+    <input type="text" id="searchInput" placeholder="Search by Name">
+    <button id="searchIcon" class="add-to-cart">Search</button>
+</div>
+<table id="data-table">
+    <thead>
+        <tr>
+            <th >Name</th>
+            <th >Availability</th>
+            <th>supplier Name</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+{% endblock %}
